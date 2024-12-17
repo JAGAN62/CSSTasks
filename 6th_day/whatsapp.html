@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="what.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+ <script>
+    function call(imgid) {
+        var images = ["myimage1", "myimage2", "myimage3", "myimage4", "myimage5"];
+        
+        images.forEach(function(id) {
+            var image = document.getElementById(id); // Get the image element by ID
+            if (id === imgid) {
+                image.style.display = (image.style.display === "block")?"none":"block";
+            } else {
+                image.style.display = "none"; // Hide the other images
+            }
+        });
+    }
+</script>
+            <div class="container">
+            <div class="head">
+                    <div id="w" class="line">WhatsApp</div>
+                    <div class="imgs">
+                        <div id="q" class="line1"><span></span><img src="../imgs/qr-code.png" height="18px" width="18px"></div>
+                        <div id="c" class="line1"><span></span><img src="../imgs/camera.png" height="20px" width="20px"></div>
+                        <div id="d" class="line1"><span></span><img src="../imgs/menu.png" height="18px" width="18px"></div>
+                    </div>
+            </div>
+            <div id="s" class="line2">
+                <div id="r" class="line3">⭕</div>
+                <input  id="in" class="line3" type="text" placeholder="      Ask Meta AI or Search">
+            </div>
+            
+            <div class="pro">
+                <img id="myimage1" class="disp" src="../imgs/first.jpg" alt="My Image" style="display: none;" height="100px" width="100px">
+                <img id="myimage2" class="disp" src="../imgs/sec.jpg" alt="My Image" style="display: none;" height="100px" width="100px">
+                <img id="myimage3" class="disp" src="../imgs/third.jpg" alt="My Image" style="display: none;" height="100px" width="100px">
+                <img id="myimage4" class="disp" src="../imgs/fouth.jpg" alt="My Image" style="display: none;" height="100px" width="100px">
+                <img id="myimage5" class="disp" src="../imgs/middle.png" alt="My Image" style="display: none;" height="100px" width="100px">
+    
+                <div id='m1' class="p1"><button onclick="call('myimage1')" style="border:none;background: transparent;" ><img src='../imgs/first.jpg' height='50px' width="50px" style="border-radius:50%;"></button></div>
+                <div id='m2' class="p1"><button onclick="call('myimage2')"  style="border:none;background: transparent;"><img src='../imgs/sec.jpg' height='50px' width="50px" style="border-radius:50%;" ></button></div>
+                <div id='m3' class="p1"><button onclick="call('myimage3')"  style="border:none;background: transparent;"><img src='../imgs/third.jpg' height='50px' width="50px" style="border-radius:50%;"></button></div>
+                <div id='m4' class="p1"><button onclick="call('myimage4')" style="border:none;background: transparent;"><img src='../imgs/fouth.jpg' height='50px' width="50px"  style="border-radius:50%;"></button></div>
+                <div id='m5' class="p1"><button onclick="call('myimage5')"  style="border:none;background: transparent;"><img src='../imgs/middle.png' height='50px' width="50px" style="border-radius:50%;"></button></div>
+               
+            </div>
+            <div class="main">
+                <div class="chat7">
+                    <div class="date"><span>Dec 28  
+                        </span></div> 
+                    <p class="lt">Hi</p>
+                    <p class="lt">Good Mornig</p>
+        
+                    <p class="rt">Hii</p>
+                    <p class="rt">Very Good Morning</p>
+                </div>
+                <div class="chat6">
+                    <div class="date"><span>Dec 29</span></div> 
+                    <p class="lt">Hi</p>
+                    <p class="lt">Good Mornig</p>
+        
+                    <p class="rt">Hii</p>
+                    <p class="rt">Very Good Morning</p>
+                </div>
+                <div class="chat5">
+                    <div class="date"><span>Dec 30</span></div> 
+                    <p class="lt">Hi</p>
+                    <p class="lt">Good Mornig</p>
+        
+                    <p class="rt">Hii</p>
+                    <p class="rt">Very Good Morning</p>
+                </div>
+            </div>
+            <!-- 
+
+            </div> -->
+
+
+
+        <footer>
+            <div class="foot">
+                <div id="face" class="f1">&#129325</div>
+                <input  id="inp" class="f1" type="text" placeholder="       Message">
+                <div id="clip" class="f1"><img src='../imgs/clip.png' height="18px" width="18px"></div>
+                <div id="rupee" class="f1" ><img src='../imgs/rupee.png' height="18px" width="18px"></div>
+                <div id="cam" class="f1"><img src="../imgs/camera.png" height="20px" width="20px"></div>
+                <div id="mic" class="f1">🎙️</div>
+            </div>
+        </footer>
+        </div>
+        
+                
+            <!-- 
+    </div>
+ -->
+        
+            
+<!--      
+        <div class="chats">
+            <div class="chat7">
+                <div class="date">Dec 28</div>
+                <!-- <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p> -->
+            </div> -->
+           <!-- 
+        </div>
+             <div class="chat6" >
+                <div class="date">Dec 29</div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+            <div class="chat5">
+                <div class="date">Dec 30</div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+            
+            <div class="chat4">
+                <div class="date">Dec 31</div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+            
+            
+            <div class="chat3">
+                <div class="date">Jan 01/div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+
+            <div class="chat2">
+                <div class="date">Yesterday</div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+            <div class="chat1">
+                <div class="date">Today</div>
+                <p class="lt">Hi</p>
+                <p class="lt">Good Mornig</p>
+    
+                <p class="rt">Hii</p>
+                <p class="rt">Very Good Morning</p>
+            </div>
+
+        <div class="chat1">
+            <div class="date">Today</div>
+            <p class="lt">Hi</p>
+            <p class="lt">Good Mornig</p>
+
+            <p class="rt">Hii</p>
+            <p class="rt">Very Good Morning</p>
+        </div>
+        
+    </div>
+
+
+          
+    </div>
+     -->
+
+
+</body>
+</html>

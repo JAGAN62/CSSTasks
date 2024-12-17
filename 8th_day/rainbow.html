@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugged Code</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* First Section - Stacked Borders */
+        .first {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-bottom: 50px;
+        }
+
+        .first img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 5; /* Ensures image is on top */
+            background-color: white;
+            border: 3px solid blue;
+        }
+
+        .border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .b2 { border: 3px solid red; transform: translate(10px, -10px); z-index: -1; }
+        .b3 { border: 3px solid orange; transform: translate(20px, -20px); z-index: -2; }
+        .b4 { border: 3px solid yellow; transform: translate(30px, -30px); z-index: -3; }
+        .b5 { border: 3px solid green; transform: translate(40px, -40px); z-index: -4; }
+        .second {
+            width: 250px;
+            height: 250px;
+            padding: 15px;
+            background: white;
+            border: 10px solid transparent;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .second img {
+            width: 100%;
+            height: 100%;
+            border:3px solid blue;
+            box-shadow:0 0 0 5px green,0 0 0 10px yellow,0 0 0 15px orange,0 0 0 20px red;
+            
+        }
+     
+    </style>
+</head>
+<body>
+    <!-- First Section: Stacked Borders -->
+    <div class="first">
+        <img src="../imgs/jagan1.jpg" alt="Jagan Image">
+        <div class="border b2"></div>
+        <div class="border b3"></div>
+        <div class="border b4"></div>
+        <div class="border b5"></div>
+    </div>
+
+    <!-- Second Section: Rainbow Borders -->
+    <div class="second">
+        <img src="../imgs/jagan2.jpg" alt="Jagan Image 2">
+    </div>
+</body>
+</html>

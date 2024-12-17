@@ -1,0 +1,197 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items:center;
+    background-color:#000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+}
+.b{
+   border-style: none;
+   border:none;
+   background-color: transparent;
+   padding-top: 10px;
+   cursor:pointer;
+}
+.b:hover{
+    background-color: #f5f5f5;
+}
+.top{
+    font-size:20px;
+    background-color: #000;
+    color:white;
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+
+}
+.top:hover{
+    cursor:pointer;
+    background-color: #ffffcc;
+    color:#000;
+    box-shadow:3px 3px 3px rgb(255, 0, 0);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.php {
+        display: inline-block;
+        background-color:#ffc0cb;
+        width: 28%;
+        height: 150px;
+        text-align: center;
+        padding:50px 50px;
+        border-radius: 10px;
+        margin:80px 10px 0 190px;
+}
+.jq {
+    display: inline-block;
+    background-color:#ffffcc;
+    width:28%;
+    height: 150px;
+    text-align: center;
+    padding:50px 50px;
+    border-radius: 10px;
+    margin:80px 0 0 50px;
+}
+.java {
+    display: inline-block;
+    background-color: #f5f5f5;
+    width: 28%;
+    height: 150px;
+    text-align: center;
+    padding:50px 50px;
+    border-radius: 10px;
+    margin:50px 10px 0 190px;
+}
+.cpp {
+display: inline-block;
+background-color:#ccffcc;
+width:28%;
+height: 150px;
+text-align: center;
+padding:50px 50px;
+border-radius: 10px;
+margin:50px 0 0 50px;
+}
+.w3 {
+    display: inline-block;
+    background-color: #f5f5f5;
+    width: 28%;
+    height: 150px;
+    text-align: center;
+    padding:50px 50px;
+    border-radius: 10px;
+    margin:50px 10px 0 190px;
+}
+.Bootstrap {
+    display: inline-block;
+    background-color:#ccffcc;
+    width:28%;
+    height: 150px;
+    text-align: center;
+    padding:50px 50px;
+    border-radius: 10px;
+    margin:50px 0 0 50px;
+}
+.c {
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 28%;
+    height: 50px;
+    text-align: center;
+    padding:50px 50px;
+    border-radius: 10px;
+    margin:120px 10px 0 190px;
+}
+.cs {
+display: inline-block;
+background-color:#ffffcc;
+width:28%;
+height: 50px;
+text-align: center;
+padding:50px 50px;
+border-radius: 10px;
+margin:120px 0 0 50px;
+}
+.r{
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 15%;
+    height: 12vh;
+    border-radius: 10px;
+    text-align: center;
+    margin:50px 5px 0 180px;
+}
+.kotlin{
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 15%;
+    height: 12vh;
+    border-radius: 10px;
+    margin:50px 5px 0 50px;
+    text-align: center;
+}
+.node{
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 15%;
+    height: 12vh;
+    border-radius: 10px;
+    margin:50px 5px 0 50px;
+    text-align: center;
+}
+.react{
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 15%;
+    height: 12vh;
+    border-radius: 10px;
+    margin:50px 0 0 50px;
+    text-align: center;
+}
+.c1{
+    display: inline-block;
+    background-color:#ffc0cb;
+    width: 28%;
+    height: 50px;
+    text-align: center;
+    padding:50px 30px;
+    border-radius: 10px;
+    margin:35px 10px 0 190px;
+    border:none;
+    border-style:none;
+}
+.c2{
+    display: inline-block;
+    background-color:#ffffcc;
+    width:28%;
+    height: 50px;
+    text-align: center;
+    padding:50px 30px;
+    border-radius: 10px;
+    margin:35px 0 0 50px;
+    border:none;
+    border-style: none;
+}
+.bc1{
+    background-color:rgba(231, 231, 117, 0.849);
+}
+.bc2{
+    background-color: lightblue;
+}
+.bc3{
+    background-color: lightgray;
+}
