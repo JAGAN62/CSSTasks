@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(5, 50px);
+            grid-template-areas:
+                "cls1 cls1 cls2 cls2 cls3 cls3 cls4 cls4"
+                "cls1 cls1 cls5 cls5 cls5 cls5 cls4 cls4"
+                "cls1 cls1 cls5 cls5 cls5 cls5 cls6 cls6"
+                "cls7 cls7 cls8 cls8 cls9 cls9 cls10 cls10"
+                "cls7 cls7 cls8 cls8 cls9 cls9 cls10 cls10";
+            gap: 10px;
+        }
+        .cls1 { grid-area: cls1; border: 2px solid black; }
+        .cls2 { grid-area: cls2; border: 2px solid lightcoral; }
+        .cls3 { grid-area: cls3; border: 2px solid slateblue; }
+        .cls4 { grid-area: cls4; border: 2px solid teal; }
+        .cls5 { grid-area: cls5; border: 2px solid hotpink; }
+        .cls6 { grid-area: cls6; border: 2px solid grey; }
+        .cls7 { grid-area: cls7; border: 2px solid seagreen; }
+        .cls8 { grid-area: cls8; border: 2px solid blueviolet; }
+        .cls9 { grid-area: cls9; border: 2px solid sandybrown; }
+        .cls10 { grid-area: cls10; border: 2px solid cadetblue; }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cls1"></div>
+        <div class="cls2"></div>
+        <div class="cls3"></div>
+        <div class="cls4"></div>
+        <div class="cls5"></div>
+        <div class="cls6"></div>
+        <div class="cls7"></div>
+        <div class="cls8"></div>
+        <div class="cls9"></div>
+        <div class="cls10"></div>
+        
+    </div>
+</body>
+</html>

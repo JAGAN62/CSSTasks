@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    h1{
+        animation:change 4s infinite;
+        text-align: center;
+    }
+    @keyframes change{
+        0%{
+            color:red;
+        }
+        30%{
+            color:rgb(30, 231, 30);
+        }
+        50%{
+            color:blue;
+        }
+        60%{
+            color:rgba(220, 20, 60, 0.922);
+        }
+        80%{
+            color:rgb(251, 6, 194);
+        }
+        90%{
+            color:cyan;
+        }
+        100%{
+            color:rgb(255, 0, 81);
+        }
+    }
+        .nav-bar{
+        display:flex;
+        /* flex-wrap: wrap; */
+        text-overflow: clip;
+        gap: 15px;
+        background-color:rgb(62, 60, 60);
+        overflow: scroll;
+        scrollbar-width: none;
+        height: 6vh;
+        margin: 20px;
+        
+                 }
+    .nav-bar > div{
+        color: white;
+        align-content: center;
+        white-space: nowrap;
+        padding: 0px 10px 0px 10px ; 
+        cursor: pointer; 
+        
+          
+    }
+    .nav-bar > div:hover{
+        background-color: rgb(13, 13, 13);
+        color:#fff;
+        animation:rubberband 1s linear;  
+        
+    }
+   
+    @keyframes rubberband {
+            0% { transform: scale(1); }
+            30% { transform: scale(1.25, 0.75); }
+            40% { transform: scale(0.75, 1.25); }
+            50% { transform: scale(1.15, 0.85); }
+            65% { transform: scale(0.95, 1.05); }
+            75% { transform: scale(1.05, 0.95); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    
+
+</head>
+<body>
+    <h1>W3 School Nav Bar</h1>
+    <div class="nav-bar">
+        <div class="html animate__rubberBand">HTML</div>
+        <div class="css">CSS</div>
+        <div class="js">JAVASCRIPT</div>
+        <div class="njs">Node JS</div>
+        <div class="rjs">react JS</div>
+        <div class="ajs">Angular JS</div>
+        <div class="py">Python</div>
+        <div class="java">Java</div>
+        <div class="c">C</div>
+        <div class="cpp">C++</div>
+        <div class="k">Kotlin</div>
+        <div class="sql">SQL</div>
+        <div class="php">PHP</div>
+        <div class="ml">Machine Learning</div>
+        <div class="ai"><span>Artificial Intellegence</span></div>
+        <div class="jq">JQuery</div>
+        <div class="boot">BootStrap</div>
+        <div class="ch">c#</div>
+        <div class="r">R</div>
+        <div class="json">Json</div>
+        <div class="type">TypeScript</div>
+        <div class="xml">xml</div>
+        <div class="excel">Excel</div>
+        <div class="npy">Numpy</div>
+        <div class="pandas">Pandas</div>
+        <div class="git">Git</div>
+        <div class="go">Go</div>
+        <div class="scipy">Scipy</div>
+        <div class="cyber">Cyber Security</div>
+        <div class="ds">Data Science</div>
+
+
+    </div>
+</body>
+</html>
