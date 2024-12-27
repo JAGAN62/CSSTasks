@@ -71,11 +71,11 @@ td {
     text-align:center;
   
 }
-@media (max-width<768px) {
+@media (max-width :768px) {
     td {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     caption {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
