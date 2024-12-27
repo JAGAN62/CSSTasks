@@ -4,11 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 4 Tasks</title>
+    <style>
+        body {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            height: 100vh; 
+            background-color: #171616;
+        }
+
+        .button {
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(245, 245, 247); 
+            color: rgb(10, 9, 9); 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px;
+            cursor: pointer; 
+            margin: 10px;
+            transition: background-color 1s ease; 
+        }
+
+        .button:before {
+            content: ""; /* Required for pseudo-element */
+            position: absolute; /* Position it absolutely within the button */
+            top: 100%; /* Start below the button */
+            left: 0; /* Align to the left */
+            height: 100%; /* Match button height */
+            width: 100%; /* Match button width */
+            background: cyan; /* Background color for the hover effect */
+            transition: top 0.3s ease; /* Smooth transition for the top property */
+            color:blueviolet;
+        }
+
+        .button:hover:before {
+            top: 0; 
+            color:blueviolet;
+        }
+
+        .button:hover {
+            background-color: rgb(0, 139, 139); /* Change button color on hover */
+            color:white;
+        }
+    </style>
 </head>
 <body>
-   
-    <button type="button" onclick="window.open('chess.html')">Task 1</button>
-    <button type="button" onclick="window.open('nav-bar.html')">Task 2</button> 
+
+    <button class="button" type="button" onclick="window.open('chess.html')">Task 1</button>
+    <button class="button" type="button" onclick="window.open('nav-bar.html')">Task 2</button> 
 
 </body>
 </html>
