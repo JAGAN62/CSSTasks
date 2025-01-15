@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        *{
+            padding:0;
+            margin:auto;
+            overflow: hidden;
+            box-sizing: content-box;
+        }
+        .music{
+            height:93vh;
+            width:25vw;
+            margin-top:2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+           line-height: 18;
+           background-image: linear-gradient(to right,rgb(198, 57, 198) ,#dad1da) ;
+
+        }
+        img{
+            height:6rem;
+            width:6rem;
+            border:2px solid indigo;
+            animation:rotate 2s linear infinite;
+            border-radius: 50%;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .lines{
+            display: flex;
+            gap:10px 20px;
+        }
+        .l1,.l2,.l3,.l4,.l5{
+            height:40vh;
+            width:2vw;
+            background-color: rgb(128, 5, 243);
+            position:relative;
+            animation:strips 1s linear infinite;
+         
+        }
+        .l1{
+            animation-delay: 0.3s;
+            background-color: rgb(255, 20, 20);
+        }
+        .l2{
+            animation-delay: 0.5s;
+            background-color: rgb(251, 99, 5);
+        }
+        .l3{
+            animation-delay: 0.7s;
+            background-color: rgb(233, 208, 13);
+        }
+        .l4{
+            animation-delay: 0.9s;
+            background-color: rgb(7, 228, 22);
+        }
+        .l5{
+            animation-delay: 0.11s;
+            background-color: rgb(49, 10, 202);
+        }
+        @keyframes strips {
+            0%{
+                top: 0px;
+                background-color: rgb(1, 233, 233);
+            }
+            30%{
+               top:100px;
+            }
+            50% {
+                top: 200px;
+            }
+            100% {
+                 top: 0px;
+            }
+        }
+        .pata{
+            width:25vw;
+            height:50vh;
+         }
+         @media screen and (max-width: 600px) {
+    .music {
+        width: 92vw; 
+        height:83vh; 
+    }
+    
+    img {
+        height: 7rem; 
+        width: 7rem;
+    }
+
+    .l1, .l2, .l3, .l4, .l5 {
+        width: 4vw;
+        height: 25vh; 
+    }
+    .pata{
+        width:auto;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="music">
+       <div class="artist">
+          <img src="../imgs/arya2.jpg">
+        </div>
+         <div class="lines">
+            <div class="l1"></div>
+            <div class="l2"></div>
+            <div class="l3"></div>
+            <div class="l4"></div>
+            <div class="l5"></div>
+         </div>
+         <div class="pata">
+            <audio src="../imgs/aarya.mp3" controls muted></audio>
+         </div> 
+       </div>
+</body>
+</html>
