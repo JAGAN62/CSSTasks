@@ -1,103 +1,110 @@
-I see the code you shared. It looks like you're trying to show and hide images based on the image ID clicked. I noticed a small issue in your code. The `image` variable is not defined in your `forEach` loop. Let's fix that!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Layout</title>
+    <style>
+        /* ... (styles for body, h2, @keyframes fire remain the same) */
 
-You can update your JavaScript function like this:
+        .corner {
+            text-align: center;
+            width: 80%;
+            margin: 50px 0;
+            position: relative;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;    /* Center vertically */
+        }
 
-```javascript
-<script>
-    function call(imgid) {
-        var images = ["myimage1", "myimage2", "myimage3", "myimage4", "myimage5"];
-        
-        images.forEach(function(id) {
-            var image = document.getElementById(id); // Get the image element by ID
-            if (id === imgid) {
-                image.style.display = "block"; // Show the clicked image
-            } else {
-                image.style.display = "none"; // Hide the other images
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center images within container */
+            margin: 0 20px;
+        }
+
+        .home5 > img {
+            width: 500px;
+            height: 350px;
+            border: 2px solid white;
+            box-shadow: 1px 1px 1px 1px white;
+        }
+
+        .home1 > img,
+        .home2 > img,
+        .home3 > img,
+        .home4 > img {
+            height: 150px;
+            width: 150px;
+            z-index: 1;
+            text-align: center;
+            border: 2px solid white;
+            margin: 10px 0;
+        }
+        .home1 > img {
+            box-shadow: 2px 2px 2px 4px rgb(254, 241, 3);
+        }
+
+        .home3 > img {
+            box-shadow: 2px 2px 2px 4px rgb(2, 246, 2);
+        }
+
+        .home2 > img {
+            box-shadow: 2px 2px 2px 4px rgb(225, 58, 2);
+        }
+
+        .home4 > img {
+            box-shadow: 2px 2px 2px 4px rgb(254, 4, 183);
+        }
+
+        /* Removed left-images and right-images specific alignment */
+
+        @media (max-width: 992px) {
+            .corner {
+                flex-direction: column;
             }
-        });
+            .image-container {
+                margin: 20px 0;
+            }
+            .home5 > img{
+                margin-bottom: 20px;
+            }
+                h2{
+        right:50px;
+        font-size: 20px;
     }
-</script>
-```
+        }
 
-In your HTML, you need to call the `call` function when an image is clicked. You can add an `onclick` attribute to each image like this:
+        @media (max-width: 768px) {
+            .home5 > img {
+                width: 300px;
+                height: 210px;
+            }
+                h2{
+        display:none;
+    }
+        }
+                @media (max-width: 500px) {
+            .home5 > img {
+                width: 250px;
+                height: 175px;
+            }
+        }
+    </style>
+</head>
+<body>
 
-```html
-<img id="myimage1" src="image1.jpg" onclick="call('myimage1')" style="display:none;">
-<img id="myimage2" src="image2.jpg" onclick="call('myimage2')" style="display:none;">
-<img id="myimage3" src="image3.jpg" onclick="call('myimage3')" style="display:none;">
-<img id="myimage4" src="image4.jpg" onclick="call('myimage4')" style="display:none;">
-<img id="myimage5" src="image5.jpg" onclick="call('myimage5')" style="display:none;">
-```
+    <div class="corner">
+        <div class="image-container"> <div class="home1"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="home2"><img src="image2.jpg" alt="Image 2"></div>
+            <div class="home3"><img src="image3.jpg" alt="Image 3"></div>
+            <div class="home4"><img src="image4.jpg" alt="Image 4"></div>
+        </div>
+        <div class="image-container"> <div class="home5"><img src="image5.jpg" alt="Image 5"></div>
+        </div>
+        <h2>Hello</h2>
+    </div>
 
-Give this a try, and it should work as expected now. Clicking on each image will show only that image and hide the rest. Let me know how it goes! 🛠️
-To create a microphone icon using CSS, you can either use an icon font like Font Awesome or create a simple microphone shape using CSS shapes. Here’s how to do both:
-
-1. Using Font Awesome:
-
-   First, include the Font Awesome CDN in your HTML:
-
-   ```html
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   ```
-
-   Then, you can use the microphone icon in your HTML:
-
-   ```html
-   <i class="fas fa-microphone"></i>
-   ```
-
-   You can style it with CSS as needed:
-
-   ```css
-   .fa-microphone {
-       font-size: 24px; /* Adjust size */
-       color: #000; /* Change color */
-   }
-   ```
-
-2. Creating a Microphone Icon with CSS:
-
-   If you prefer to create a simple microphone shape using pure CSS, here’s an example:
-
-   ```html
-   <div class="microphone"></div>
-   ```
-
-   And the CSS:
-
-   ```css
-   .microphone {
-       width: 40px;
-       height: 60px;
-       background-color: #000; /* Body color */
-       border-radius: 20px 20px 0 0; /* Rounded top */
-       position: relative;
-       margin: 20px auto; /* Centering */
-   }
-
-   .microphone::after {
-       content: '';
-       width: 20px;
-       height: 20px;
-       background-color: #000; /* Circle color */
-       border-radius: 50%; /* Make it a circle */
-       position: absolute;
-       top: -10px; /* Position above the body */
-       left: 50%;
-       transform: translateX(-50%); /* Center it */
-   }
-
-   .microphone::before {
-       content: '';
-       width: 10px;
-       height: 10px;
-       background-color: #000; /* Base color */
-       border-radius: 5px; /* Rounded base */
-       position: absolute;
-       bottom: -10px; /* Position below the body */
-       left: 50%;
-       transform: translateX(-50%); /* Center it */
-   }
-   ```
-
-This will give you a simple microphone shape using CSS. You can adjust the sizes and colors to fit your design. Let me know if you need further assistance!
+</body>
+</html>

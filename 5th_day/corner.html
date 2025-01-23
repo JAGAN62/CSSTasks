@@ -4,11 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corner images</title>
-    <link rel="stylesheet" href="corner.css">
+    <!-- <link rel="stylesheet" href="corner.css"> -->
+     <style>
+        body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  background-color:black;
+        }
+  h2{
+    position:absolute;
+    bottom:-150px;
+    right:250px;
+    animation:fire 1s infinite;
+    color:rgb(15, 14, 14);
+    font-size: 30px;
+  }
+  @keyframes fire{
+    0%{
+       text-shadow:2px 0 white,-2px 0 rgb(255, 255, 255);
+    }
+    30%{
+      text-shadow:2px 0 #fbf9f9,-2px 0 rgb(248, 220, 3);
+    }
+    50% {
+        text-shadow:-2px 0 rgb(0, 229, 255),2px 0 rgb(255, 0, 187);
+    }
+    100%{
+        text-shadow:2px 0 rgb(4, 246, 254),-2px 0 rgb(3, 253, 32);
+    }
+}
+.corner{
+  text-align:center;
+   width:70%;
+  margin:100px 0px 100px 0px;
+  position:relative;
+
+}
+.corner>img{
+  position:absolute;
+}
+.corner>img:hover{
+  cursor:ponter;
+}
+.home5 > img{
+    width:500px;
+    height:350px;
+    border:2px solid white;
+    box-shadow:1px 1px 1px 1px white;
+  
+
+}
+.home1 > img{
+  position:absolute;
+  height:150px;
+  width:150px;
+  top:-50px;
+  left:170px;
+  z-index: 1;
+  text-align:center;
+  border:2px solid white;
+  box-shadow:2px 2px 2px 4px rgb(254, 241, 3);
+}
+.home3 > img{
+  position:absolute;
+  height:150px;
+  width:150px;
+  top:-50px;
+  right:150px;
+  z-index: 1;
+  text-align:center;
+  border:2px solid white;
+  box-shadow:2px 2px 2px 4px rgb(2, 246, 2);
+}
+.home2 > img{
+  position:absolute;
+  height:150px;
+  width:150px;
+  left:170px;
+  bottom:-50px;
+  z-index: 1;
+  text-align:center;
+  border:2px solid white;
+  box-shadow:2px 2px 2px 4px rgb(225, 58, 2);
+}
+.home4 > img{
+  position:absolute;
+  height:150px;
+  width:150px;
+  right:150px;
+  bottom:-50px;
+  z-index: 1;
+  text-align:center;
+  border:2px solid white;
+  box-shadow:2px 2px 2px 4px rgb(254, 4, 183);
+}
+
+
+@media (max-width: 576px) {
+  .corner{
+    top:100px;
+  }
+  .home5 > img {
+      width: 200px;
+      height: 140px;
+  }
+  .home3 > img,
+  .home4 > img {
+      width: 80px;
+      height: 80px;
+      left: 10px;
+      
+  }
+  .home1 > img,
+  .home2 > img {
+      width: 80px;
+      height: 80px;
+      left: 200px;
+      
+  }
+  h2{
+    font-size:1.5rem;
+    left:-40px;
+  }
+}
+     </style>
 </head>
 <body>
     <div class="corner">
-        <h2>FULL STACK DEVELOPMENT</h2>
+        <h2>FULL&nbsp;&nbsp;STACK&nbsp;&nbsp;DEVELOPMENT</h2>
         <div class="home1">
             <img src="../imgs/first.jpg" alt="" title="Python">
         </div>
