@@ -1,110 +1,66 @@
+Sure! Here’s how you can incorporate internal CSS directly within the HTML document. This way, you won’t need a separate CSS file. 
+
+### Complete HTML with Internal CSS:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Layout</title>
+    <title>Rotating Border Button</title>
     <style>
-        /* ... (styles for body, h2, @keyframes fire remain the same) */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Light background for contrast */
+        }
 
-        .corner {
-            text-align: center;
-            width: 80%;
-            margin: 50px 0;
+        .button {
             position: relative;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center;    /* Center vertically */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: 2px solid transparent;
+            cursor: pointer;
+            overflow: hidden;
+            transition: color 0.3s ease;
         }
 
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center images within container */
-            margin: 0 20px;
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #fff;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+            z-index: -1; /* Place it behind the button */
         }
 
-        .home5 > img {
-            width: 500px;
-            height: 350px;
-            border: 2px solid white;
-            box-shadow: 1px 1px 1px 1px white;
+        .button:hover::before {
+            transform: rotate(360deg); /* Rotate the border on hover */
         }
 
-        .home1 > img,
-        .home2 > img,
-        .home3 > img,
-        .home4 > img {
-            height: 150px;
-            width: 150px;
-            z-index: 1;
-            text-align: center;
-            border: 2px solid white;
-            margin: 10px 0;
-        }
-        .home1 > img {
-            box-shadow: 2px 2px 2px 4px rgb(254, 241, 3);
-        }
-
-        .home3 > img {
-            box-shadow: 2px 2px 2px 4px rgb(2, 246, 2);
-        }
-
-        .home2 > img {
-            box-shadow: 2px 2px 2px 4px rgb(225, 58, 2);
-        }
-
-        .home4 > img {
-            box-shadow: 2px 2px 2px 4px rgb(254, 4, 183);
-        }
-
-        /* Removed left-images and right-images specific alignment */
-
-        @media (max-width: 992px) {
-            .corner {
-                flex-direction: column;
-            }
-            .image-container {
-                margin: 20px 0;
-            }
-            .home5 > img{
-                margin-bottom: 20px;
-            }
-                h2{
-        right:50px;
-        font-size: 20px;
-    }
-        }
-
-        @media (max-width: 768px) {
-            .home5 > img {
-                width: 300px;
-                height: 210px;
-            }
-                h2{
-        display:none;
-    }
-        }
-                @media (max-width: 500px) {
-            .home5 > img {
-                width: 250px;
-                height: 175px;
-            }
+        .button:hover {
+            color: #007BFF; /* Change text color on hover */
         }
     </style>
 </head>
 <body>
-
-    <div class="corner">
-        <div class="image-container"> <div class="home1"><img src="image1.jpg" alt="Image 1"></div>
-            <div class="home2"><img src="image2.jpg" alt="Image 2"></div>
-            <div class="home3"><img src="image3.jpg" alt="Image 3"></div>
-            <div class="home4"><img src="image4.jpg" alt="Image 4"></div>
-        </div>
-        <div class="image-container"> <div class="home5"><img src="image5.jpg" alt="Image 5"></div>
-        </div>
-        <h2>Hello</h2>
-    </div>
-
+    <button class="button">Hover Me</button>
 </body>
 </html>
+```
+
+### Explanation:
+
+1. Internal CSS: The `<style>` tag in the `<head>` section contains all the CSS styles. This eliminates the need for an external stylesheet.
+2. Functionality: The button behaves the same way as before, with a rotating border effect on hover.
+
+You can copy this code into an HTML file and open it in a web browser to see the button and its hover effect in action! Adjust any styles as needed to fit your preferences.

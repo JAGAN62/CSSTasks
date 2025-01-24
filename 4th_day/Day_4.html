@@ -10,43 +10,29 @@
             justify-content: center; 
             align-items: center;
             height: 100vh; 
-            background-color: #171616;
+            background-color: #0b0b0b;
         }
 
         .button {
             position: relative;
             overflow: hidden;
-            background-color: rgb(245, 245, 247); 
-            color: rgb(10, 9, 9); 
+            background-color: rgb(29, 189, 189); 
+            color: rgb(44, 44, 165); 
             border: none; 
+            box-shadow:0 0 5px cyan;
+            border-radius: 10px;
             padding: 10px 20px; 
             font-size: 16px;
             cursor: pointer; 
             margin: 10px;
-            transition: background-color 1s ease; 
         }
+        .button:hover{
+            box-shadow:0 0 5px cyan,
+            0 0 25px cyan,
+            0 0 50px cyan;
+        }
+      
 
-        .button:before {
-            content: ""; /* Required for pseudo-element */
-            position: absolute; /* Position it absolutely within the button */
-            top: 100%; /* Start below the button */
-            left: 0; /* Align to the left */
-            height: 100%; /* Match button height */
-            width: 100%; /* Match button width */
-            background: cyan; /* Background color for the hover effect */
-            transition: top 0.3s ease; /* Smooth transition for the top property */
-            color:blueviolet;
-        }
-
-        .button:hover:before {
-            top: 0; 
-            color:blueviolet;
-        }
-
-        .button:hover {
-            background-color: rgb(0, 139, 139); /* Change button color on hover */
-            color:white;
-        }
     </style>
 </head>
 <body>
