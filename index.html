@@ -6,22 +6,102 @@
     <title>All CSS Tasks</title>
 </head>
 <style>
-    .tasks{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 20px;
-        width:auto;
-        text-align: center;
+      /* Global Styles */
+      * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    }
-    button{
-        display: flex;
-        justify-content: center;
-        height:5vh;
-        text-align: center;
-        
-}
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tasks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        button {
+            background: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Unique button colors */
+        button:nth-child(odd) {
+            background: #007BFF; /* Blue */
+        }
+
+        button:nth-child(even) {
+            background: #FF5722; /* Orange */
+        }
+
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tasks {
+                grid-template-columns: 1fr;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+        }
 </style>
 <body>
 
@@ -33,8 +113,8 @@
     <div class="tasks">
         <button type="button" onclick="window.open('1st_day/1_resume.html')">Day 1</button>
         <button type="button" onclick="window.open('2nd_day/2_layout.html')">Day 2</button>
-        <button type="button" onclick="window.open('3rd_day/3_cards.html')"> Day 3</button>
-        <button type="button" onclick="window.open('4th_day/Day_4.html')">   Day 4</button>
+        <button type="button" onclick="window.open('3rd_day/architech.html')"> Day 3</button>
+        <button type="button" onclick="window.open('4th_day/Day_4.html')">  Day 4</button>
         <button type="button" onclick="window.open('5th_day/corner.html')">Day 5</button>
         <button type="button" onclick="window.open('6th_day/3_cards.html')"> Day 6</button>
         <button type="button" onclick="window.open('7th_day/chess.html')">   Day 7</button>

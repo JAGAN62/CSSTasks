@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0000ff">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 0;
+            /* overflow-y: hidden;
+            overflow-x: hidden; */
+            /* box-sizing: content-box; */
+            overflow-x: hidden;
+            /* scrollbar-width: hidden; */
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            width: 100%;
+           
+            height: 60px;
+            z-index: 1;
+            /* padding: 20px; */
+            font-size: 18px;
+            position: fixed;
+            top: 0;
+            
+        }
+        .h1{
+            align-content: center;
+            margin-left: 30px;
+        }
+        ul{
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin-right: 80px;
+        
+        }
+        #firstalpha{
+            font-weight: 700;
+            margin-right: 9px;
+           
+        }
+        .main{
+            overflow-y: auto;
+            z-index: 1;
+        }
+        .sec1{
+            position: relative;
+            font-size: 21px;
+            
+        }
+        .sec1-1{
+            
+            position: absolute;
+            top: 55vh;
+            color: white;
+            right: 45vw;
+            font-size: 45px;
+        }
+        #falpha{
+            font-size: 45px;
+           font-weight: 700;
+            background-color: black;
+            margin-right: 9px;
+            padding: 3px 2px 3px 2px;
+           
+        }
+        .sec2{
+             position: relative;
+            /* margin-top: 90px;
+            margin-bottom: 90px; */
+            margin: 0.5%;
+        }
+        #sec2title,hr{
+            margin-top: 20px;
+            margin-left: 10px;
+            font-size: 21px;
+        }
+        hr{
+            width: 97%;
+            color: lightgrey;
+            margin-bottom: 30px;
+            opacity: 0.3;
+        }
+        .img{
+             margin-top: 70px;
+        }
+        .projimg1 > div > img{
+            width: 335px;
+            height: 235px;
+          
+           margin-bottom: 5px;
+        
+            
+        }
+        .projimg2 > div > img{
+            width: 335px;
+            height: 235px;
+           /* margin-right: 10px; */
+           /* margin-left: 25px; */
+           margin-bottom: 5px;
+          
+        }
+        .projimg1{
+           /* text-align: center; */
+           margin-top: 40px;
+          
+           display: flex;
+           justify-content: space-evenly;
+        
+          
+
+        }
+        .projimg2{
+            /* text-align: center; */
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .text1,.text2, .text3, .text4{
+            position: absolute;
+            /* width: 100px;
+            height: 30px; */
+            color: white;
+            background-color: black;
+            
+            align-self: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 16px;
+            
+            
+            margin-top: -245px;
+        }
+        
+        .about{
+            display: flex;
+            justify-content: space-evenly;
+           
+        }
+        .d1{
+            width: 335px;
+           
+         }
+        .d1 > img{
+            width: 335px;
+            height: 225px;
+            filter: contrast(0.5);
+               
+          
+        }
+        .sec3title, .sec3con{
+            margin: 0.5%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+           
+
+            font-size: 21px;
+
+        }
+        .anchor{
+            width: 335px;
+            height: 30px;
+            background-color: rgb(231, 229, 229);
+            font-size: 21px;
+            margin-top: 20px;
+            justify-content: conter;
+            text-align: center;
+        }
+        .anchor:hover{
+            background-color: lightgray;
+        }
+        .sec4, .sec5{
+            margin: 0.5%;
+        }
+        form input[type="submit"]:hover{
+            background-color: lightgrey;
+        }
+        .footer{
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            color: white;
+            text-align: center;
+           
+            
+
+        }
+        .sec4 > #p1{
+            font-size: 21px;
+        }
+        .sec4 > #p2{
+            font-size: 18px;
+        }
+        .footer > p {
+          padding: 20px;
+          font-size: 21px;
+          margin: 0 0 0 0;
+        }
+         form input[type="submit"]:hover{
+            background-color: lightgrey;
+            color: black;
+        }
+        input[type="submit"]{
+            margin-top: 30px; 
+            width: 10%; 
+            padding: 9px; 
+            background-color: black; 
+            color: white;
+        }
+        .sec5{
+            width: 100vw;
+            /* margin: 20px; */
+            
+        }
+
+
+
+        .txt{
+            font-size: 21px; 
+            margin-top: 20px;
+        }
+        .atxt{
+            font-size: 18px;
+             margin-top: 20px;
+             opacity: 0.5;
+
+        }
+        .data{
+            font-size: 18px; margin-top: 20px;
+
+        }
+
+
+        /* media querries */
+
+/* Media query for devices with a max-width of 1200px (large screens) */
+@media(min-width: 300px) and (max-width: 800px) {
+    .header {
+        font-size: 16px;
+        display: flex;
+            justify-content: space-between;
+            background-color: white;
+            width: 100%;
+           
+            height: 60px;
+            z-index: 1;
+            /* padding: 20px; */
+            
+            position: fixed;
+            top: 0;
+    }
+    .h1{
+            align-content: center;
+            margin-left: 20px;
+        }
+        .h2{
+            align-content: center;
+        }
+        ul{
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            margin-right: 30px;
+        }
+        #falpha{
+            font-size: 35px;
+           font-weight: 700;
+            background-color: black;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 3px 2px 3px 2px;
+        }
+        .sec1-1{
+            font-size: 35px;
+            
+            
+            position: absolute;
+            top: 35vh;
+            color: white;
+            right: 35vw;
+            
+        
+        }
+        .im > img{
+            width: 100vw;
+            height: 500px;
+
+        }
+
+        /* section2 */
+        .sec2{
+             position: relative;
+            /* margin-top: 90px;
+            margin-bottom: 90px; */
+            margin: 0.5%;
+        }
+        .projimg1 > div > img{
+            width: 335px;
+            height: 235px;
+          
+           margin-bottom: 5px;
+        
+            
+        }
+        .projimg2 > div > img{
+            width: 335px;
+            height: 235px;
+           /* margin-right: 10px; */
+           /* margin-left: 25px; */
+           margin-bottom: 5px;
+          
+        }
+        .projimg1, .projimg2{
+           /* text-align: center; */
+           margin-top: 40px;
+          
+           display: grid;
+           margin-left: auto;
+           margin-right: auto;
+           
+        
+          
+
+        }
+        .i{
+            margin: 40px 0px 0px 90px;
+        }
+
+
+
+
+        
+       
+        .text1,.text2, .text3, .text4{
+            position: absolute;
+            /* width: 100px;
+            height: 30px; */
+            color: white;
+            background-color: black;
+            
+            align-self: center;
+            justify-content: center;
+            
+            font-size: 14px;
+            padding: 8px;
+            margin-top: -208px;
+        }
+        .sec3{
+            margin:0.5%;
+        }
+        .sec3 > .sec3con{
+            font-size: 16px;
+        }
+        .about{
+            
+            display: inline;
+        }
+        .d1 > .anchor{
+            margin: 20px 20px 20px 20px;
+        }
+        
+
+
+
+
+
+
+
+    
+    .projimg1 > div > img, .projimg2 > div > img {
+        width: 300px;
+        height: 200px;
+    }
+
+
+
+    .d1{
+            width: 235px;
+            margin-left: auto;
+            margin-right: auto;
+           
+         }
+        .d1 > img{
+            width: 235px;
+            height: 155px;
+            filter: contrast(0.5);
+               
+          
+        }
+
+
+
+
+    .txt{
+            font-size: 16px; 
+            margin-top: 10px;
+        }
+        .atxt{
+            font-size: 14px;
+             margin-top: 10px;
+             opacity: 0.5;
+
+        }
+        .data{
+            font-size: 14px; margin-top: 10px;
+
+        }
+
+        .anchor{
+            width: 135px;
+            height: 30px;
+            background-color: rgb(231, 229, 229);
+            font-size: 21px;
+            margin-top: 50px;
+            padding: 5px 0 0 0;
+           
+           
+        }
+        .anchor:hover{
+            background-color: gray;
+        }
+       
+    
+
+
+
+
+
+
+
+
+
+    form input[type="submit"]:hover{
+            background-color: lightgrey;
+            color: black;
+        }
+        input[type="submit"]{
+            margin-top: 30px; 
+            width: fit-content; 
+            padding: 5px; 
+            background-color: black; 
+            color: white;
+        }
+
+        .sec4{
+            margin: 2%;
+        }
+        
+        .sec4 > #p2{
+            font-size: 16px;
+        }
+       
+        
+        .sec5 > img{
+            width: 100%;
+            /* height: 400px; */
+           
+            padding: 0;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="main"> -->
+        <div class="header">
+            <div class="h1"><span id="firstalpha">B R</span>Architects</div>
+            <div class="h2">
+                <ul >
+                    <li >Projects</li>
+                    <li>About</li>
+                    <li>contacts</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="sec1">
+            <div class="im"><img src="../imgs/br1.jpg" alt="architect1"></div>
+        <div class="sec1-1"><span id="falpha">BR</span>Architects</div>
+    </div>
+    <div class="sec2">
+        <span id="sec2title">Projects</span>
+        <hr>
+        <div class="img">
+            <div class="projimg1">
+                <div class="img1 i">
+                    <img src="house1.jpg" alt="house1">
+                    <div class="text1">summer house</div>
+                </div>
+                <div class="img2 i">
+                    <img src="house2.jpg" alt="house2">
+                    <div class="text1">Brick House</div>
+
+                </div>
+                <div class="img3 i">
+                    <img src="house3.jpg" alt="house3">
+                    <div class="text1">Renovated </div>
+                </div>
+                <div class="img4 i">
+                    <img src="house4.jpg" alt="house4">
+                    <div class="text1">Barn House</div>
+
+                </div>
+               
+                
+                
+               
+            </div>
+            <div class="projimg2">
+                <div class="img1 i">
+                    <img src="house2 (1).jpg" alt="house5">
+                    <div class="text1">Summer House</div>
+
+                </div>
+                <div class="img2 i">
+                    <img src="house2(2).jpg" alt="house6">
+                    <div class="text1">Brick House</div>
+                </div>
+                <div class="img3 i">
+                    <img src="house4 2(3).jpg" alt="house7">
+                    <div class="text1">Renovated</div>
+                </div>
+                <div class="img4 i">
+                    <img src="house2(4).jpg" alt="house8">
+                    <div class="text1">Barn House</div>
+
+                </div>
+                
+                
+               
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="sec3">
+        <div class="sec3title">About</div>
+        <div class="sec3con">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="about">
+            <div class="d1">
+                <img src="ceo&founder.jpg" alt="ceo&founder" class="im">
+                <div class="txt" >John Doe</div>
+                <div class="atxt" >CEO & FOUNDER</div>
+                <div class="data" >Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="anchor"><a id="anchor">Contact</a></div>
+            </div>
+            <div class="d1">
+                <img src="Architect2.jpg" alt="Architect">
+                <div class="txt" >Jane Doe</div>
+                <div class="atxt" >Architect</div>
+                <div class="data" >Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="anchor"><a id="anchor">Contact</a></div>
+            </div>
+            <div class="d1">
+                <img src="Architect3.jpg" alt="Architect">
+                <div class="txt" >Mike Ross</div>
+                <div class="atxt" >Architect</div>
+                <div class="data" >Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="anchor"><a id="anchor">Contact</a></div>
+            </div>
+            <div class="d1">
+                <img src="Architect4.jpg" alt="Architect">
+                <div class="txt" >Dan Star</div>
+                <div class="atxt" >Architect</div>
+                <div class="data" >Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="anchor"><a id="anchor">Contact</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sec4">
+        <p id="p1">Contact</p>
+        <p id="p2">Lets get in touch and talk about your next project.</p>
+        <form style="margin-right: 30px ;">
+            <input type="text" name="userName" required placeholder="Name" style="width: 100%; font-size: 16PX; padding: 5px 0px 5px 0px; margin: 10px 0 0 0px;">
+            <input type="text" name="userName" required placeholder="Name" style="width: 100%; font-size: 16PX; padding: 5px 0px 5px 0; margin: 10px 0 0 0px;">
+            <input type="text" name="userName" required placeholder="Name" style="width: 100%; font-size: 16PX; padding: 5px 0px 5px 0; margin: 10px 0 0 0px">
+            <input type="text" name="userName" required placeholder="Name" style="width: 100%; font-size: 16PX; padding: 5px 0px 5px 0; margin: 10px 0 0 0px;">
+            <input type="submit" value="SEND MESSAGE" >
+        </form>
+    </div>
+    <div class="sec5">
+        <img src="map.jpg" alt="map">
+    </div>
+    <div class="footer">
+        <p>Powered by <u>w3.css</u></p>
+    </div>
+
+    <!-- </div> -->
+    
+    
+    
+</body>
+</html>
