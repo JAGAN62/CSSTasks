@@ -1,81 +1,119 @@
-body{
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    }
-    caption {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        font-weight: bold;
-        color:purple;
-        animation:bounce 3s infinite;
-        
-      }
-      @keyframes bounce{
-        0%{
-            transform:translateY(0);
-        }
-        40%{
-            transform:translateY(-50px);
-        }
-        60%{
-            transform:translateY(-20px);
-        }
-      }
+    padding: 20px;
+}
 
-:root{
-    --b:rgba(0, 0, 255, 0.567);
-    --w:#fff;
-    --bpicks:rgb(255, 0, 0);
-    --wpicks:rgb(18, 19, 18);
-}
-tr:nth-child(even) td:nth-child(odd),
-tr:nth-child(odd) td:nth-child(even) {
-    background-color:var(--b);
-}
-tr:nth-child(even) td:nth-child(even),
-tr:nth-child(odd) td:nth-child(odd) {
-    background-color:var(--w);
-}
-tr:nth-child(1),tr:nth-child(2){
-    color:var(--bpicks);
-}
-tr:nth-last-child(1),tr:nth-last-child(2){
-    color:var(--wpicks)
-}
+/* Chess Board Container */
 .chess {
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90vw;
+    max-width: 900px;
+    transition: transform 0.3s;
 }
+
+.chess:hover {
+    transform: scale(1.02);
+}
+
+/* Board Styling */
 table {
     border-collapse: collapse;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;  /* Keeps board square */
+    transition: 0.3s ease;
 }
+
+/* Caption Styling */
+caption {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Board cells */
 td {
     width: 12.5%;
     height: 12.5%;
     text-align: center;
-    font-size: 4vw;
-    background-color: #ffffff;
+    vertical-align: middle;
+    font-size: 3vw;     /* Dynamic font size for responsive scaling */
+    transition: background 0.3s, transform 0.2s;
 }
-.chess{
-    display:flex;
-    justify-content: center;
-    text-align:center;
-  
+
+/* Alternating board colors */
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background: #b58863; /* Dark square */
 }
-@media (max-width :768px) {
-    td {
-        font-size: 6vw;
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+    background: #f0d9b5; /* Light square */
+}
+
+/* Hover effect */
+td:hover {
+    background: #ffeb3b !important; /* Highlight on hover */
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Chess Pieces Styling */
+.pick1 { 
+    color: #000; /* Black pieces */
+}
+
+.pick2 { 
+    color: #fff; /* White pieces */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);  /* Shadow for contrast */
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+    .chess {
+        width: 95vw;
+        padding: 15px;
     }
+
+    table {
+        width: 100%;
+        height: auto;
+    }
+
+    td {
+        font-size: 4vw;   /* Larger font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .chess {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    td {
+        font-size: 6vw;   /* Larger pieces for better visibility on small screens */
+    }
+
     caption {
-        font-size: 1.5rem;
+        font-size: 20px;   /* Smaller caption on mobile */
     }
 }
